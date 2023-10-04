@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "critical:build": "scripty",
     "critical": "scripty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

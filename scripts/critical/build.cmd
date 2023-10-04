@@ -1,0 +1,1 @@
+pnpm tsc --project "./projects/critical/tsconfig.json"
