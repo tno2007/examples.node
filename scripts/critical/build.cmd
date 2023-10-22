@@ -1,1 +1,1 @@
-pnpm tsc --project "./projects/critical/tsconfig.json"
+pnpm tsc --project "./packages/critical/tsconfig.json"
