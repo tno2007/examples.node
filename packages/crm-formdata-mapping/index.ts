@@ -178,9 +178,15 @@ const operations: IOperationConfig[] = [
 //// complain if you are trying to perform INSERT when a ID is specified
 
 
+interface IEntity {
+    $id: string;
+    [key: string]: unknown;
+
+}
+
 const _odata = {
-    create: (obj: any) => { },
-    update: (obj: any) => { }
+    create: (obj: IEntity) => { },
+    update: (obj: IEntity) => { }
 }
 
 const map = new Map();
@@ -208,7 +214,9 @@ for (const operation of operations) {
     // perform operation
     // how do we know which operation to perform
 
-
+    const obj: IEntity = {
+        $id: "20ad60f6-51c1-ec11-811e-0050560111da",
+    }
     if (operation.action === "create") {
         const id = _odata.create(obj);
         map.set(operation.primaryKeyIdentifier, id);
